@@ -24,7 +24,7 @@ func main() {
 	fmt.Println(v1, exist1)           //-1, true
 	fmt.Println(e1.Key(), e1.Value()) //1, -1
 	//遍历 (注意：不要在遍历的过程中，去对树做添加和删除操作)
-	//查找前序和后继
+	//查找前序和后继（即使key不在树中）
 	tree.Prev(2) //1
 	tree.Next(2) //3
 	tree.Prev(3) //2

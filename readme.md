@@ -15,7 +15,7 @@ plusdata补充golang常用的数据结构, 包括如下:
 	- [avl树](#avl树)
     - [红黑树](#红黑树)
     - [b树](#红黑树)
-    - [b+树](#b+树)
+    - [b+树](#b树-1)
 
 plusdata提供简洁的操作，每个数据结构只提供适合他的操作。
 
@@ -421,7 +421,7 @@ func main() {
 	v1, exist1 := tree.Get(1)
 	fmt.Println(v1, exist1)           //-1, true
 	fmt.Println(e1.Key(), e1.Value()) //1, -1
-	//查找前序和后继
+	//查找前序和后继（即使key不在树中）
 	tree.Prev(2) //1
 	tree.Next(2) //3
 	tree.Prev(3) //2
@@ -512,12 +512,12 @@ func main() {
 	v1, exist1 := tree.Get(1)
 	fmt.Println(v1, exist1)           //-1, true
 	fmt.Println(e1.Key(), e1.Value()) //1, -1
-	//查找前序和后继
+	//查找前序和后继（即使key不在跳表中）
 	tree.Prev(2) //1
 	tree.Next(2) //3
 	tree.Prev(3) //2
 	tree.Next(3) //nil
-	tree.Next(1) //nil
+	tree.Prev(1) //nil
 	//遍历 (注意：不要在遍历的过程中，做添加和删除操作)
 	//正序遍历
 	e := tree.Left()
@@ -594,12 +594,12 @@ func main() {
 	v1, exist1 := tree.Get(1)
 	fmt.Println(v1, exist1)           //-1, true
 	fmt.Println(e1.Key(), e1.Value()) //1, -1
-	//查找前序和后继
+	//查找前序和后继（即使key不在树中）
 	tree.Prev(2) //1
 	tree.Next(2) //3
 	tree.Prev(3) //2
 	tree.Next(3) //nil
-	tree.Next(1) //nil
+	tree.Prev(1) //nil
 	//遍历 (注意：不要在遍历的过程中，去对树做添加和删除操作)
 	//正序遍历
 	e := tree.Left()
@@ -677,12 +677,12 @@ func main() {
 	v1, exist1 := tree.Get(1)
 	fmt.Println(v1, exist1)           //-1, true
 	fmt.Println(e1.Key(), e1.Value()) //1, -1
-	//查找前序和后继
+	//查找前序和后继（即使key不在树中）
 	tree.Prev(2) //1
 	tree.Next(2) //3
 	tree.Prev(3) //2
 	tree.Next(3) //nil
-	tree.Next(1) //nil
+	tree.Prev(1) //nil
 	//遍历 (注意：不要在遍历的过程中，去对树做添加和删除操作)
 	//正序遍历
 	e := tree.Left()
@@ -757,12 +757,12 @@ func main() {
 	v1, exist1 := tree.Get(1)
 	fmt.Println(v1, exist1)           //-1, true
 	fmt.Println(e1.Key(), e1.Value()) //1, -1
-	//查找前序和后继
+	//查找前序和后继（即使key不在树中）
 	tree.Prev(2) //1
 	tree.Next(2) //3
 	tree.Prev(3) //2
 	tree.Next(3) //nil
-	tree.Next(1) //nil
+	tree.Prev(1) //nil
 	//遍历 (注意：不要在遍历的过程中，去对树做添加和删除操作)
 	//正序遍历
 	e := tree.Left()
@@ -838,12 +838,12 @@ func main() {
 	v1, exist1 := tree.Get(1)
 	fmt.Println(v1, exist1)           //-1, true
 	fmt.Println(e1.Key(), e1.Value()) //1, -1
-	//查找前序和后继
+	//查找前序和后继（即使key不在树中）
 	tree.Prev(2) //1
 	tree.Next(2) //3
 	tree.Prev(3) //2
 	tree.Next(3) //nil
-	tree.Next(1) //nil
+	tree.Prev(1) //nil
 	//遍历 (注意：不要在遍历的过程中，去对树做添加和删除操作)
 	//正序遍历
 	e := tree.Left()
