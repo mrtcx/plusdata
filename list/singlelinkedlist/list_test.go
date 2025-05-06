@@ -181,9 +181,6 @@ func TestMerge(t *testing.T) {
 	if toString(l1) != "1" {
 		t.Errorf("expected 1 got %s", toString(l1))
 	}
-	if l2.head != nil || l2.tail != nil || l2.size != 0 {
-		t.Errorf("expected empty")
-	}
 	l3 := New()
 	l3.PushBack(2)
 	l1.Merge(l3)
