@@ -29,7 +29,7 @@ func main() {
 	tree.Next(2) //3
 	tree.Prev(3) //2
 	tree.Next(3) //nil
-	tree.Next(1) //nil
+	tree.Prev(1) //nil
 	//正序遍历
 	e := tree.Left()
 	for e != nil {
